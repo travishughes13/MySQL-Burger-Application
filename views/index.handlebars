@@ -4,7 +4,6 @@
 		<h1> Come Getcha Some! </h1>
 	</div>
 
-	{{!-- burger list before being eaten --}}
 <div class="jumbotron">
 	<div class="row">
 		<div class="col-md-4 col-md-offset-1">
@@ -29,8 +28,6 @@
 		</div>
 	</div>
 
-
-		{{!-- burger list after being eaten --}}
 	<div class="row">
 		<div class="col-md-4 col-md-offset-2">
 			<div class="panel panel-default">
@@ -39,6 +36,12 @@
 					{{#if this.devoured}}
 					<li class="list-group-item eaten">
 						<p class="lead">{{this.burger_name}} </p>
+						<span class="input-group-btn">
+								<form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+									<input type="hidden" name="devoured" value="false">
+									<button class="btn btn-default btn-success btn-lg" type="submit"> PURGE IT! </button>
+								</form>
+							</span>
 					</li>
 					{{/if}}
 				{{/each}}
@@ -49,7 +52,6 @@
 	<div class="col-md-10 col-md-offset-1">
 		<p class="lead"> What burger sounds good? </p>
 
-		{{!-- section to add burgers --}}
 		<form class="create-update-form" action="burgers/create" method="POST">
 
 			<div class="form-group">
