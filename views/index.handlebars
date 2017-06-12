@@ -1,6 +1,6 @@
 <div class="container">	
 	<div class="jumbotron"> 
-		<img src="/assets/img/burger.png" style="width:200px; height:200px;"> 
+		<img src="/assets/img/burger.png" style="margin-left: 40%; width:200px; height:200px;"> 
 		<h1> Come Getcha Some! </h1>
 	</div>
 
@@ -12,7 +12,7 @@
 				<ol>
 				{{#each burgers}}
 					{{#unless this.devoured}}
-					<li class="list-group-item">
+					<li class="list-group-item rtc">
 						<div class="input-group">
 							<p class="lead"> {{this.burger_name}} </p>
 							<span class="input-group-btn">
@@ -37,7 +37,7 @@
 				<ol class="list-group">
 				{{#each burgers}}
 					{{#if this.devoured}}
-					<li class="list-group-item">
+					<li class="list-group-item eaten">
 						<p class="lead">{{this.burger_name}} </p>
 					</li>
 					{{/if}}
@@ -45,7 +45,6 @@
 				</ol>
 			</div>
 		</div>
-	</div>
 	</div>
 	<div class="col-md-10 col-md-offset-1">
 		<p class="lead"> What burger sounds good? </p>
@@ -57,7 +56,8 @@
 				<textarea class="form-control input-lg" type="text" name="b_name" rows="3"> </textarea>
 			</div>
 
-			<button class="btn btn-default btn-success btn-lg" type="submit">Add Burger!</button>
+			<button class="btn btn-default btn-success btn-lg" type="submit" style="margin-left: 42%;">Add Burger!</button>
 		</form>
 	</div>
 </div>
+	</div>
